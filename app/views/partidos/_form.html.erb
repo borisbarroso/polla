@@ -1,0 +1,50 @@
+<% form_for(@partido) do |f| %>
+  <%= f.error_messages %>
+
+
+  <div style="float:left; width: 49%">
+    <p>
+      <%= f.label :equipo1 %><br />
+      <%= f.collection_select :equipo1, Equipo.all, :id, :nombre, :include_blank => true %>
+    </p>
+    <p>
+      <%= f.label :goles_equipo1 %><br />
+      <%= f.text_field :goles_equipo1, :size => 2 %>
+    </p>
+  </div>
+
+  <div style="float:left; width: 49%">
+    <p>
+      <%= f.label :equipo2 %><br />
+      <%= f.collection_select :equipo2, Equipo.all, :id, :nombre, :include_blank => true %>
+    </p>
+    <p>
+      <%= f.label :goles_equipo2 %><br />
+      <%= f.text_field :goles_equipo2, :size => 2 %>
+    </p>
+  </div>
+  <p>
+    <%= f.label :lugar %><br />
+    <%= f.text_field :lugar %>
+  </p>
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.datetime_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+    <blockquote>Indica si perntece a un grupo, octavos de final, semifinales, etc. (Ej. Grupo A)</blockquote>
+  </p>
+  <p>
+    <%= f.label :jugado %>
+    <%= f.check_box :jugado %>
+  </p>
+  <p>
+    <%= f.label :publicar %>
+    <%= f.check_box :publicar %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  equipo_id: 1
+  nombre: MyString
+  numero: 1
+  goles: 1
+
+two:
+  equipo_id: 1
+  nombre: MyString
+  numero: 1
+  goles: 1

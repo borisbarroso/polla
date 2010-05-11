@@ -1,0 +1,33 @@
+<p>
+  <b>Equipo1:</b>
+  <%=h @partido.equipo1 %>
+</p>
+
+<p>
+  <b>Equipo2:</b>
+  <%=h @partido.equipo2 %>
+</p>
+
+<p>
+  <b>Lugar:</b>
+  <%=h @partido.lugar %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%=h @partido.fecha %>
+</p>
+
+<p>
+  <b>Jugado:</b>
+  <%=h @partido.jugado %>
+</p>
+
+<p>
+  <b>Publicar:</b>
+  <%=h @partido.publicar %>
+</p>
+
+
+<%= link_to 'Edit', edit_partido_path(@partido) %> |
+<%= link_to 'Back', partidos_path %>

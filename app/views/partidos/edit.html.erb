@@ -1,0 +1,36 @@
+<h1>Editing partido</h1>
+
+<% form_for(@partido) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :equipo1 %><br />
+    <%= f.text_field :equipo1 %>
+  </p>
+  <p>
+    <%= f.label :equipo2 %><br />
+    <%= f.text_field :equipo2 %>
+  </p>
+  <p>
+    <%= f.label :lugar %><br />
+    <%= f.text_field :lugar %>
+  </p>
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.datetime_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :jugado %><br />
+    <%= f.check_box :jugado %>
+  </p>
+  <p>
+    <%= f.label :publicar %><br />
+    <%= f.check_box :publicar %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @partido %> |
+<%= link_to 'Back', partidos_path %>

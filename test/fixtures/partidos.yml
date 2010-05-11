@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  equipo1: 1
+  equipo2: 1
+  lugar: MyString
+  fecha: 2010-05-11 00:26:18
+  jugado: false
+  publicar: false
+
+two:
+  equipo1: 1
+  equipo2: 1
+  lugar: MyString
+  fecha: 2010-05-11 00:26:18
+  jugado: false
+  publicar: false

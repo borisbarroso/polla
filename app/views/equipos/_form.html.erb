@@ -1,0 +1,19 @@
+<% form_for(@equipo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :grupo_id %><br />
+    <%= f.collection_select :grupo_id, Grupo.all, :id, :nombre, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :bandera %><br />
+    <%= f.text_field :bandera %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

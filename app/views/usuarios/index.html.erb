@@ -1,0 +1,38 @@
+<h1>Usuarios</h1>
+
+<fieldset>
+  <legend>Buscar</legend>
+  <% form_tag usuarios_path, :method => :get do %>
+    <%= label_tag "usuario", "Email" %>
+    <%= text_field_tag "email" %>
+    <%= submit_tag "Buscar" %>
+  <% end %>
+</fieldset>
+
+<%= link_to 'Nuevo usuario', new_usuario_path, :class => 'new' %>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Email</th>
+    <th>Alias</th>
+    <th>Telefono</th>
+    <th>Celular</th>
+  </tr>
+
+<% @usuarios.each do |usuario| %>
+  <tr>
+    <td><%=h usuario.nombre %></td>
+    <td><%=h usuario.email %></td>
+    <td><%=h usuario.alias %></td>
+    <td><%=h usuario.telefono %></td>
+    <td><%=h usuario.celular %></td>
+    <td><%= link_to 'Show', usuario %></td>
+    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'Destroy', usuario, :confirm => 'Esta seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

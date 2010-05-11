@@ -1,0 +1,18 @@
+<p>
+  <b>Grupo:</b>
+  <%=h @equipo.grupo %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @equipo.nombre %>
+</p>
+
+<p>
+  <b>Bandera:</b>
+  <%=h @equipo.bandera %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipo_path(@equipo) %> |
+<%= link_to 'Back', equipos_path %>

@@ -1,0 +1,91 @@
+Script iniciado (mar 11 may 2010 00:25:36 BOT
+) _______________________________________
+( There are more things in heaven and   )
+( earth, Horatio, than are dreamt of in )
+( your philosophy.                      )
+(                                       )
+( -- Wm. Shakespeare, "Hamlet"          )
+ ---------------------------------------
+  o
+   o
+       ___  
+     {~._.~}
+      ( Y )
+     ()~*~()   
+     (_)-(_)   
+[01;32mboris@boris-laptop[01;34m ~/dev/ruby/polla $[00m rm -R my[3Pcd ..vim config/database.yml cd ..[K[Kscript/e[Kgenerate scaffold partido equipo1:integer equipo2:int eger lugar:string fecha:datetime jugado:boolean publicar:boolean
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/gem_dependency.rb:119:Warning: Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+      exists  app/models/
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/partidos
+      exists  app/views/layouts/
+      exists  test/functional/
+      exists  test/unit/
+      exists  test/unit/helpers/
+      exists  public/stylesheets/
+      create  app/views/partidos/index.html.erb
+      create  app/views/partidos/show.html.erb
+      create  app/views/partidos/new.html.erb
+      create  app/views/partidos/edit.html.erb
+      create  app/views/layouts/partidos.html.erb
+   identical  public/stylesheets/scaffold.css
+      create  app/controllers/partidos_controller.rb
+      create  test/functional/partidos_controller_test.rb
+      create  app/helpers/partidos_helper.rb
+      create  test/unit/helpers/partidos_helper_test.rb
+       route  map.resources :partidos
+  dependency  model
+      exists    app/models/
+      exists    test/unit/
+      exists    test/fixtures/
+      create    app/models/partido.rb
+      create    test/unit/partido_test.rb
+      create    test/fixtures/partidos.yml
+      exists    db/migrate
+      create    db/migrate/20100511042618_create_partidos.rb
+[01;32mboris@boris-laptop[01;34m ~/dev/ruby/polla $[00m rake db:migrate
+(in /home/boris/dev/ruby/polla)
+==  CreatePartidos: migrating =================================================
+-- create_table(:partidos)
+   -> 0.0048s
+-- add_index(:partidos, :equipo1)
+   -> 0.0290s
+-- add_index(:partidos, :equipo2)
+   -> 0.0229s
+-- add_index(:jugado)
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+wrong number of arguments (1 for 2)
+
+(See full trace by running task with --trace)
+[01;32mboris@boris-laptop[01;34m ~/dev/ruby/polla $[00m rake db:rollback
+(in /home/boris/dev/ruby/polla)
+==  CreateJugadores: reverting ================================================
+-- drop_table(:jugadores)
+   -> 0.0025s
+==  CreateJugadores: reverted (0.0026s) =======================================
+
+[01;32mboris@boris-laptop[01;34m ~/dev/ruby/polla $[00m rale db:mira[K[Kgrate
+No command 'rale' found, did you mean:
+ Command 'ale' from package 'ale' (universe)
+ Command 'rake' from package 'rake' (universe)
+rale: command not found
+[01;32mboris@boris-laptop[01;34m ~/dev/ruby/polla $[00m rale db:migrate[1P[1@k
+(in /home/boris/dev/ruby/polla)
+==  CreateJugadores: migrating ================================================
+-- create_table(:jugadores)
+   -> 0.0182s
+-- add_index(:jugadores, :equipo_id)
+   -> 0.0093s
+-- add_index(:jugadores, :nombre)
+   -> 0.0286s
+==  CreateJugadores: migrated (0.0569s) =======================================
+
+==  CreatePartidos: migrating =================================================
+-- create_table(:partidos)
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+Mysql::Error: Table 'partidos' already exists: CREATE TABLE `partidos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `equipo1` int(11), `equipo2` int(11), `lugar` varchar(255), `fecha` datetime, `goles_equipo1` int(11), `goles_equipo2` int(11), `tipo` varchar(255), `jugado` tinyint(1), `publicar` tinyint(1), `created_a

@@ -1,0 +1,23 @@
+<p>
+  <b>Equipo:</b>
+  <%=h @jugador.equipo_id %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%=h @jugador.nombre %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%=h @jugador.numero %>
+</p>
+
+<p>
+  <b>Goles:</b>
+  <%=h @jugador.goles %>
+</p>
+
+
+<%= link_to 'Edit', edit_jugador_path(@jugador) %> |
+<%= link_to 'Back', jugadores_path %>

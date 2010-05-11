@@ -1,0 +1,23 @@
+<% form_for(@jugador) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :equipo_id %><br />
+    <%= f.collection_select :equipo_id, Equipo.all, :id, :nombre, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.label :goles %><br />
+    <%= f.text_field :goles %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

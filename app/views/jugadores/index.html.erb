@@ -1,0 +1,36 @@
+<h1>Listing jugadores</h1>
+
+<fieldset>
+  <legend>Buscar</legend>
+  <% form_tag jugadores_path, :method => :get do %>
+    <%= label_tag "nombre", "Jugador" %>
+    <%= text_field_tag "nombre" %>
+    <%= submit_tag "Buscar" %>
+  <% end %>
+</fieldset>
+
+<%= link_to 'Nuevo jugador', new_jugador_path, :class => "new" %>
+
+<table>
+  <tr>
+    <th>Equipo</th>
+    <th>Nombre</th>
+    <th>Numero</th>
+    <th>Goles</th>
+  </tr>
+
+<% @jugadores.each do |jugador| %>
+  <tr>
+    <td><%=h jugador.equipo %></td>
+    <td><%=h jugador.nombre %></td>
+    <td><%=h jugador.numero %></td>
+    <td><%=h jugador.goles %></td>
+    <td><%= link_to 'Show', jugador %></td>
+    <td><%= link_to 'Edit', edit_jugador_path(jugador) %></td>
+    <td><%= link_to 'Destroy', jugador, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

@@ -1,0 +1,19 @@
+<h1>New grupo</h1>
+
+<% form_for(@grupo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :cede %><br />
+    <%= f.text_field :cede %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', grupos_path %>
